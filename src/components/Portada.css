@@ -4,23 +4,34 @@
   height: 100vh; /* Pantalla completa */
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* Empuja el contenido hacia abajo */
+  justify-content: flex-end;
   align-items: center;
   overflow: hidden;
 }
 
+/* 🔹 OPCIÓN 1: Mostrar la imagen completa (pueden quedar franjas negras/espacios) */
 .portada-img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* La imagen se adapta sin deformarse */
-  z-index: -1; /* La manda detrás del botón */
+  height: auto;
+  max-height: 100vh;
+  object-fit: contain; 
+  object-position: center;
+  z-index: -1;
 }
 
+/* 🔹 OPCIÓN 2: Que la imagen siempre llene toda la pantalla (puede recortarse un poco) */
+/*
+.portada-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+*/
+
 .portada-btn {
-  margin-bottom: 50px; /* Ajusta distancia desde el borde inferior */
+  margin-bottom: 50px;
   padding: 12px 30px;
   font-size: 18px;
   border: none;
@@ -36,3 +47,11 @@
   transform: scale(1.05);
 }
 
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+  .portada-btn {
+    margin-bottom: 20px;
+    font-size: 16px;
+    padding: 10px 24px;
+  }
+}
