@@ -1,11 +1,12 @@
 import React from "react";
 import "./Portada.css";
+import portada from "../assets/portada.png"; // asegúrate de tenerla en /src/assets
 
 function Portada() {
   return (
     <section className="portada-container">
       <img
-        src="/img/portada.png"
+        src={portada}
         alt="Portada Dra. Ximena Palacio"
         className="portada-img"
       />
@@ -15,6 +16,7 @@ function Portada() {
 }
 
 export default Portada;
+
 
 
 
