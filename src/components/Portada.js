@@ -1,23 +1,14 @@
-import React from "react";
 import "./Portada.css";
-import portada from "../assets/portada.png"; // asegúrate de tenerla en /src/assets
 
 function Portada() {
   return (
-    <section className="portada-container">
-      <img
-        src={portada}
-        alt="Portada Dra. Ximena Palacio"
-        className="portada-img"
-      />
-      <button className="portada-btn">Continuar</button>
-    </section>
+    <div className="portada">
+      <h1>Dra. Ximena Palacio</h1>
+      <button className="continuar-btn">Continuar</button>
+    </div>
   );
 }
 
 export default Portada;
-
-
-
 
 

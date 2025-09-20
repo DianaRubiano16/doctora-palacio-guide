@@ -1,10 +1,12 @@
+import "./App.css";
+import Portada from "./components/Portada";
+
 function App() {
   return (
     <div className="App">
-      <h1>Dra. Ximena Palacio</h1>
+      <Portada />
     </div>
   );
 }
 
 export default App;
-
