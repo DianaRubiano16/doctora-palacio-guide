@@ -1,14 +1,20 @@
+import React from "react";
 import "./Portada.css";
 
 function Portada() {
   return (
-    <div className="portada">
-      <h1>Dra. Ximena Palacio</h1>
-      <button className="continuar-btn">Continuar</button>
-    </div>
+    <section className="portada-container">
+      <img
+        src="/img/portada.png"
+        alt="Portada Dra. Ximena Palacio"
+        className="portada-img"
+      />
+      <div className="portada-overlay">
+        <button className="btn-continuar">Continuar</button>
+      </div>
+    </section>
   );
 }
 
 export default Portada;
-
 
